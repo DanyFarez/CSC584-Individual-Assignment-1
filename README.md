@@ -1,4 +1,5 @@
 # CSC584 Individual Assignment 1 - Personal Profile Web Application
+DANNY FAREEZ BIN MOHD FARIDZNADZRI (2026112079) CS2404C
 
 ## Project Description
 A secure student profile web application built using HTML5, Java Servlets, and JSP. The application collects user profile inputs via an HTML form using HTTP POST, processes them through a controller servlet, and displays them on a styled output page.
@@ -10,12 +11,12 @@ A secure student profile web application built using HTML5, Java Servlets, and J
 - Apache Tomcat / GlassFish Server
 
 ## How to Run the Application
-1. Clone or download this repository[cite: 2].
+1. Clone or download this repository.
 2. Import the project into NetBeans IDE.
 3. Configure and run the project on your local server.
-4. Navigate to `index.html`, fill out the student profile form, and submit to view the profile card[cite: 1, 2].
+4. Navigate to `index.html`, fill out the student profile form, and submit to view the profile card.
 
 ## Output Screenshots
 - **Form Page**: ![Form Page](screenshots/form1.png)
 - **Form Page**: ![Form Page](screenshots/form2.png)
-- **Profile Result Page**: [Profile Result](screenshots/result.png)
+- **Profile Result Page**: ![Profile Result](screenshots/result.png)

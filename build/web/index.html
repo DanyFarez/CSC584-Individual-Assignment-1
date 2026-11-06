@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile Web Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #030305;
+            background-image: 
+                radial-gradient(circle at 50% 0%, #1a0509 0%, #030305 70%),
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 30px 30px, 30px 30px;
+            color: #f1f5f9;
+            font-family: 'Courier New', Courier, monospace;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 0;
+        }
+
+        .terminal-container {
+            width: 100%;
+            max-width: 640px;
+        }
+
+        .classification-header {
+            text-align: center;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            color: #dc143c;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .main-card {
+            background: #0c0d12;
+            border-radius: 4px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(220, 20, 60, 0.4);
+            border: 1px solid rgba(220, 20, 60, 0.25);
+            border-top: 3px solid #dc143c;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-card::before {
+            content: "RESTRICTED // EYES ONLY";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            font-size: 3.5rem;
+            color: rgba(220, 20, 60, 0.03);
+            white-space: nowrap;
+            pointer-events: none;
+            font-weight: 900;
+            letter-spacing: 5px;
+        }
+
+        .card-header-custom {
+            background: rgba(220, 20, 60, 0.05);
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(220, 20, 60, 0.25);
+        }
+
+        .corporate-emblem {
+            width: 65px;
+            height: 65px;
+            background: #000000;
+            color: #dc143c;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 2px solid #dc143c;
+            box-shadow: 0 0 15px rgba(220, 20, 60, 0.4);
+        }
+
+        .form-control {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid #262a36;
+            border-radius: 2px;
+            padding: 12px 16px;
+            color: #ffffff !important;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control::-webkit-input-placeholder {
+            color: #64748b !important;
+        }
+
+        .form-control:focus {
+            background-color: rgba(10, 10, 15, 0.9);
+            border-color: #dc143c;
+            box-shadow: 0 0 10px rgba(220, 20, 60, 0.4);
+            color: #ffffff !important;
+            outline: none;
+        }
+
+        .form-label {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            color: #94a3b8 !important;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .form-label span {
+            color: #dc143c;
+        }
+
+        .btn-umbrella {
+            background: #dc143c;
+            border: none;
+            border-radius: 2px;
+            padding: 14px;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(220, 20, 60, 0.4);
+        }
+
+        .btn-umbrella:hover {
+            background: #fa1e4e;
+            color: #ffffff;
+            box-shadow: 0 6px 25px rgba(250, 30, 78, 0.6);
+            transform: translateY(-1px);
+        }
+
+        textarea.form-control {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="terminal-container">
+    <div class="classification-header">
+        <i class="fa-solid fa-lock me-1"></i> SECURE SYSTEM 
+    </div>
+    <div class="card main-card">
+        <div class="card-header-custom">
+            <div class="corporate-emblem">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <h4 class="fw-bold mb-1 text-white tracking-widest" style="letter-spacing: 2px;">PERSONAL PROFILE</h4>
+        </div>
+        <div class="card-body p-4 p-md-5">
+            <!-- Form configured to submit via POST to the ProfileServlet[cite: 1, 2] -->
+            <form action="ProfileServlet" method="post">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name <span>*</span></label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="e.g. Danny Fareez" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="studentId" class="form-label">Student ID / Personnel Code <span>*</span></label>
+                    <input type="text" class="form-control" id="studentId" name="studentId" placeholder="e.g. 2026888123" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="programme" class="form-label">Programme / Division <span>*</span></label>
+                    <input type="text" class="form-control" id="programme" name="programme" placeholder="e.g. CS240 / Information Technology" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="email" class="form-label">Secure Email Address <span>*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="e.g. student@uitm.edu.my" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="hobbies" class="form-label">Hobbies / Specialization</label>
+                    <input type="text" class="form-control" id="hobbies" name="hobbies" placeholder="e.g. Systems Analysis, Coding, Research">
+                </div>
+                
+                <div class="mb-4">
+                    <label for="bio" class="form-label">Short Self-Introduction / Briefing</label>
+                    <textarea class="form-control" id="bio" name="bio" rows="3" placeholder="Provide background profile summary..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-umbrella w-100">
+                    AUTHORIZE & TRANSMIT RECORD <i class="fa-solid fa-terminal ms-2"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

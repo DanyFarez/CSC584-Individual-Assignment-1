@@ -16,5 +16,5 @@ A secure student profile web application built using HTML5, Java Servlets, and J
 4. Navigate to `index.html`, fill out the student profile form, and submit to view the profile card[cite: 1, 2].
 
 ## Output Screenshots
-- **Form Page**: `screenshots/form.png`
-- **Profile Result Page**: `screenshots/profile.png`
+- **Form Page**
+- **Profile Result Page**

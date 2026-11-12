@@ -8,7 +8,7 @@ A secure student profile web application built using HTML5, Java Servlets, and J
 - HTML5 / CSS3 (Bootstrap 5 & FontAwesome)
 - Java Servlets
 - JavaServer Pages (JSP)
-- Apache Tomcat / GlassFish Server
+- GlassFish Server
 
 ## How to Run the Application
 1. Clone or download this repository.
